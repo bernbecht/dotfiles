@@ -10,3 +10,7 @@ whoknocks() {
 mk() {
     mkdir "$1"
 }
+# creates new OSW spin instance
+newosw() {
+    spin up online-store-web --name "$1"
+}
