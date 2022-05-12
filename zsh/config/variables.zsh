@@ -2,7 +2,6 @@
 # --------------------------------------
 
 # Timezone
-export TZ="America/Montreal"
 
 # Oh My ZSH
 export ZSH=$HOME/.oh-my-zsh
