@@ -33,4 +33,9 @@ ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gitignore_global ~/.gitignore_global
 echo "  ✅ Git config"
 
+#Vim
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+echo "  ✅ Vim config"
+
+
 source ~/.zshrc
