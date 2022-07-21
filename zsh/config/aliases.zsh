@@ -9,6 +9,7 @@ alias p='cd ~/projects'
 alias nr='npm run'
 alias pp='cd ~/projects/personal'
 alias home='cd ~/'
+alias vimconfig='cd ~/dotfiles/vim/ && vim .vimrc'
 
 # Git
 # ----

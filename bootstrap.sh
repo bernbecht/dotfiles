@@ -35,6 +35,7 @@ echo "  ✅ Git config"
 
 #Vim
 ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/vim/colors ~/.vim/colors
 echo "  ✅ Vim config"
 
 
