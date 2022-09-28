@@ -1,6 +1,6 @@
 set number
 set numberwidth=4
-colorscheme darkblue
+colorscheme elflord
 syntax on
-au InsertLeave * colorscheme darkblue
-au InsertEnter * colorscheme monokai
+au InsertLeave * colorscheme elflord
+au InsertEnter * colorscheme darkblue

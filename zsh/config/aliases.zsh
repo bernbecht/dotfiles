@@ -15,12 +15,13 @@ alias vimconfig='cd ~/dotfiles/vim/ && vim .vimrc'
 # ----
 alias ggac='git add . && git commit'
 alias ggac:amend='git add . && git commit --amend'
-alias ggpurge='git branch | grep -v "master" | xargs git branch -D'
+alias ggpurge='git branch | grep -v "main" | xargs git branch -D'
 alias ggdev='git checkout dev'
 alias ggmo='git merge origin/main'
 alias ggmend='git commit --amend --no-edit'
 alias ggpatch='ga . && ggmend && ggpush -f'
 alias ggcp='git cherry-pick'
+alias ggrh='git reset --hard'
 
 # Shopify mobile
 # ---
