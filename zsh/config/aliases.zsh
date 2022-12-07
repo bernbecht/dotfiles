@@ -21,7 +21,6 @@ alias ggmo='git merge origin/main'
 alias ggmend='git commit --amend --no-edit'
 alias ggpatch='ga . && ggmend && ggpush -f'
 alias ggcp='git cherry-pick'
-alias ggrh='git reset --hard'
 
 # Shopify mobile
 # ---

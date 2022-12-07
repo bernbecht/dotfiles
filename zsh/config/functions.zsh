@@ -10,11 +10,16 @@ whoknocks() {
 mk() {
     mkdir "$1"
 }
+# git hard reset to certain step behind
+ggrh() {
+  git reset --hard HEAD~"$1"
+}
+## Shopify
 # creates new OSW spin instance
 newosw() {
     spin up online-store-web --name "$1"
 }
-## Shopify
+
 base() {
     local regex=/Shopify/(.+)/?
     local command="$1"
