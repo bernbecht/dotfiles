@@ -14,3 +14,7 @@ mk() {
 ggrh() {
   git reset --hard HEAD~"$1"
 }
+
+ggpurge() {
+  git branch | grep -v "$1" | xargs git branch -D
+}
