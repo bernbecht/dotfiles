@@ -21,7 +21,7 @@ jobs:
             const trigger = '/comment-it';
             if (comment.includes(trigger)) {
               console.log('Command found in comment!');
-              github.reactions.createForIssueComment({
+              github.rest.reactions.createForIssueComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 comment_id: context.payload.comment.id,
