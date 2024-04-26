@@ -1,0 +1,29 @@
+name: Comment Hello on Command
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  comment_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if comment contains /comment-it
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const comment = github.context.payload.comment.body;
+            const trigger = '/comment-it';
+            if (comment.includes(trigger)) {
+              console.log('Command found in comment!');
+              const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
+              octokit.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: 'Hello!'
+              });
+            } else {
+              console.log('Command not found in comment.');
+            }
