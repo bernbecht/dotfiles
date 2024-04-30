@@ -14,9 +14,13 @@ jobs:
     steps:
       - name: Check if comment contains /comment-it
         uses: actions/github-script@v7
+        env:
+          open_ai_token: ${{ secrets.OPENAI_API }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const fetch = require('node-fetch');
+
             const comment = context.payload.comment.body;
             const trigger = '/comment-it';
             if (comment.includes(trigger)) {
@@ -33,6 +37,39 @@ jobs:
                 repo: context.repo.repo,
                 body: '👋 Thanks for reporting!'
               })
+              // OpenAI API endpoint
+              const openaiUrl = 'https://api.openai.com/v1/completions';
+
+              // Your OpenAI API key
+                const apiKey = process.env.open_ai_token;
+
+              // Data to send to OpenAI API
+              const inputData = {
+                prompt: 'Once upon a time,',
+                max_tokens: 50
+              };
+
+              fetch(openaiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify(inputData)
+              })
+              .then(response => response.json())
+              .then(data => {
+                console.log(data.choices[0].text);
+                  github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: 'data.choices[0].text'
+                })
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
             } else {
               console.log('Command not found in comment.');
             }
