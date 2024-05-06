@@ -21,6 +21,10 @@ alias ggmend='git commit --amend --no-edit'
 alias ggpatch='ga . && ggmend && ggpush -f'
 alias ggcp='git cherry-pick'
 
+# Github CLI
+# ----
+alias pr='gh pr view'
+alias prnew='gh pr create'
 
 #Others
 #----
