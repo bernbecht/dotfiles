@@ -11,10 +11,14 @@ mk() {
     mkdir "$1"
 }
 # git hard reset to certain step behind
-ggrh() {
+resetTo() {
   git reset --hard HEAD~"$1"
 }
-
-ggpurge() {
+# git hard reset to certain commit
+purgeTo() {
   git branch | grep -v "$1" | xargs git branch -D
+}
+# sync current branch with certain branch
+rebaseTo() {
+  git rebase "$1"
 }
