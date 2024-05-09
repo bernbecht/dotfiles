@@ -14,17 +14,15 @@ alias dotfiles='cd ~/dotfiles'
 # Git
 # ----
 alias ggac='git add . && git commit'
-alias ggac:amend='git add . && git commit --amend'
 alias ggdev='git checkout dev'
-alias ggmo='git merge origin/main'
 alias ggmend='git commit --amend --no-edit'
 alias ggpatch='ga . && ggmend && ggpush -f'
 alias ggcp='git cherry-pick'
 
 # Github CLI
 # ----
-alias pr='gh pr view'
-alias prnew='gh pr create'
+alias pr:v='gh pr view'
+alias pr:c='gh pr create'
 
 #Others
 #----
