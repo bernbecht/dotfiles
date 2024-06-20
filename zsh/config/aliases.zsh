@@ -21,8 +21,8 @@ alias ggcp='git cherry-pick'
 
 # Github CLI
 # ----
-alias pr:v='gh pr view'
-alias pr:c='gh pr create'
+alias prv='gh pr view'
+alias prc='gh pr create'
 
 #Others
 #----
