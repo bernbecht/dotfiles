@@ -22,3 +22,19 @@ purgeTo() {
 rebaseTo() {
   git rebase "$1"
 }
+# backup 
+backup() {
+  echo "💾 Backing up"
+  # list of folders to backup
+  folders=(
+    "$HOME/personal/notes"
+    "$HOME/dotfiles"
+  )
+ # current date
+  date=$(date '+%Y-%m-%d')
+ # for each item in a list of folders, commit and push
+  for i in "${folders[@]}"; do
+    echo "💾 Backing up $i"
+    cd "$i" && git add . && git commit -m "💾 backup $date" && git push
+  done
+}
