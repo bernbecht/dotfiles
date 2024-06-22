@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "minimatch": "^9.0.4"
+  },
+  "scripts": {
+    "find": "node findVariablesUsage.js"
+  }
+}
