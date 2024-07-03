@@ -25,6 +25,7 @@ rebaseTo() {
 # backup 
 backup() {
   echo "💾 Backing up"
+  // invoke copyNotes function
   copyNotes
   # list of folders to backup
   folders=(
