@@ -22,6 +22,17 @@ purgeTo() {
 rebaseTo() {
   git rebase "$1"
 }
+copyNotes() {
+  echo "📝 Copying notes"
+  dest="$HOME/personal/notes/Axonify"
+  origins=(
+    "$HOME/Documents/Axonify"
+  )
+  for i in "${origins[@]}"; do
+    echo "📝 Copying $i"
+    cp -r "$i" "$dest"
+  done
+}
 # backup 
 backup() {
   echo "💾 Backing up"
@@ -38,15 +49,5 @@ backup() {
   for i in "${folders[@]}"; do
     echo "💾 Backing up $i"
     cd "$i" && git add . && git commit -m "💾 backup $date" && git push
-  done
-}
-copyNotes() {
-  echo "📝 Copying notes"
-  dest="$HOME/personal/notes/Axonify"
-  origins=(
-    "$HOME/Documents/Axonify"
-  for i in "${origins[@]}"; do
-    echo "📝 Copying $i"
-    cp -r "$i" "$dest"
   done
 }
