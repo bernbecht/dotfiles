@@ -18,6 +18,7 @@ alias ggdev='git checkout dev'
 alias ggmend='git commit --amend --no-edit'
 alias ggpatch='ga . && ggmend && ggpush -f'
 alias ggcp='git cherry-pick'
+alias ggclean='sh ~/dotfiles/scripts/bash/delete-local-merged-branches.sh'
 
 # Github CLI
 # ----
