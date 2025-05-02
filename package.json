@@ -1,0 +1,26 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "Personal dotfiles configuration management",
+  "private": true,
+  "scripts": {
+    "bootstrap": "zsh bootstrap.sh",
+    "update": "git pull origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernardobechtold/dotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "zsh",
+    "vim",
+    "git"
+  ],
+  "author": "Bernardo Bechtold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bernardobechtold/dotfiles/issues"
+  },
+  "homepage": "https://github.com/bernardobechtold/dotfiles#readme"
+} 
