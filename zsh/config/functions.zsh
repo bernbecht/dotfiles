@@ -56,7 +56,7 @@ backup() {
     echo -e "${YELLOW}→ $1${NC}"
   }
 
-  _log_warning() {
+  _log_warning() {          
     echo -e "${YELLOW}⚠ $1${NC}"
   }
 
