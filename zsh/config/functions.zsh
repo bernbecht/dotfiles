@@ -36,7 +36,7 @@ copyNotes() {
 # backup 
 backup() {
   echo "💾 Backing up"
-  copyNotes
+  # copyNotes
   # list of folders to backup
   folders=(
     "$HOME/personal/notes"
