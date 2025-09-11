@@ -22,17 +22,6 @@ git:purgeTo() {
 git:rebaseTo() {
   git rebase "$1"
 }
-copyNotes() {
-  echo "📝 Copying notes"
-  dest="$HOME/personal/notes/Axonify"
-  origins=(
-    "$HOME/Documents/Axonify"
-  )
-  for i in "${origins[@]}"; do
-    echo "📝 Copying $i"
-    cp -r "$i" "$dest"
-  done
-}
 # backup 
 backup() {
   # Colors for better visual feedback
@@ -66,7 +55,18 @@ backup() {
 
   _log_header "STARTING BACKUP PROCESS"
 
-  # copyNotes # Assuming this is a custom function you might have
+  # Check NOTES_PATH
+  if [ -z "${NOTES_PATH}" ]; then
+    _log_error "Environment variable NOTES_PATH is not set."
+    echo
+    echo "To fix it, add the following to your shell config (e.g. ~/.bashrc or ~/.zshrc):"
+    echo "  export NOTES_PATH=<path-to-your-notes-folder>"
+    echo
+    echo "Then reload your shell"
+    echo "  source ~/.bashrc (or ~/.zshrc)"
+    _log_header "ABORTING BACKUP PROCESS"
+    return 1
+  fi
 
   # list of folders to backup
   folders=(
