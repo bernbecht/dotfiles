@@ -70,7 +70,7 @@ backup() {
 
   # list of folders to backup
   folders=(
-    "$HOME/personal/notes"
+    "$NOTES_PATH"
     "$HOME/dotfiles"
   )
 
