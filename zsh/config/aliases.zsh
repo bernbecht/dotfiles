@@ -10,6 +10,8 @@ alias nr='npm run'
 alias home='cd ~/'
 alias vimconfig='cd ~/dotfiles/vim/ && vim .vimrc'
 alias dotfiles='cd ~/dotfiles'
+alias src='source ~/.bashrc'
+alias bluefilter='hyprshade toggle blue-light-filter'
 
 # Git
 # ----
