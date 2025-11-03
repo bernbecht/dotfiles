@@ -16,6 +16,9 @@ export GIT_EDITOR='vim'
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
+# Locations
+export NOTES_PATH=$HOME/obsidian-notes
+
 # Path
 export PATH="$HOME/.zsh/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
