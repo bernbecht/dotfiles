@@ -13,6 +13,7 @@ alias dotfiles='cd ~/dotfiles'
 alias src='source ~/.bashrc'
 alias bluefilter='hyprshade toggle blue-light-filter'
 alias keyboard='cd /etc/keyd/ && sudo nvim default.conf'
+alias lt='eza --tree --level=2 --long --icons --git'
 
 # Git
 # ----
