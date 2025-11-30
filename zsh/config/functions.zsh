@@ -68,11 +68,10 @@ backup() {
     return 1
   fi
 
-  # list of folders to backup
+  # list of folders to backup that has different github projects
   folders=(
     "$NOTES_PATH"
     "$HOME/dotfiles"
-    "$HOME/dotfiles/brew"
   )
 
   # creates brew dump file
