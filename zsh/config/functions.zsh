@@ -72,7 +72,18 @@ backup() {
   folders=(
     "$NOTES_PATH"
     "$HOME/dotfiles"
+    "$HOME/dotfiles/brew"
   )
+
+  # creates brew dump file
+  _log_header "UPDATING BREW CONFIGURATION"
+  if command -v brew &> /dev/null; then
+    _log_info "Generating updated Brewfile..."
+    brew bundle dump --file="$HOME/dotfiles/brew/Brewfile" --force
+    _log_success "Brewfile"
+  else
+    _log_warning "Homebrew not found, skipping Brewfile generation"
+  fi
 
   # current date
   current_date=$(date '+%Y-%m-%d')
