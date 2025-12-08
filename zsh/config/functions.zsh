@@ -84,6 +84,9 @@ backup() {
     _log_warning "Homebrew not found, skipping Brewfile generation"
   fi
 
+  _log_header "BACKING UP Karabiner"
+  cp ~/.config/karabiner/karabiner.json ~/dotfiles/keyboard/karabiner.json
+
   # current date
   current_date=$(date '+%Y-%m-%d')
 
@@ -99,7 +102,7 @@ backup() {
         _log_error "Not a git repository: $folder_path. Skipping."
         continue
     fi
-
+≥≥
     # Attempt to change directory, and log error if it fails
     cd "$folder_path" || {
       _log_error "Failed to change directory to $folder_path. Skipping."
