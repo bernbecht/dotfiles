@@ -75,7 +75,7 @@ backup() {
   )
 
   # creates brew dump file
-  _log_header "UPDATING BREW CONFIGURATION"
+  _log_header "Backing up BREWFILE"
   if command -v brew &> /dev/null; then
     _log_info "Generating updated Brewfile..."
     brew bundle dump --file="$HOME/dotfiles/brew/Brewfile" --force
@@ -84,7 +84,7 @@ backup() {
     _log_warning "Homebrew not found, skipping Brewfile generation"
   fi
 
-  _log_header "BACKING UP Karabiner"
+  _log_header "Backing up Karabiner"
   cp ~/.config/karabiner/karabiner.json ~/dotfiles/keyboard/karabiner.json
   _log_success 'Copied Karabiner config'
 
