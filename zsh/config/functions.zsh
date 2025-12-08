@@ -79,13 +79,14 @@ backup() {
   if command -v brew &> /dev/null; then
     _log_info "Generating updated Brewfile..."
     brew bundle dump --file="$HOME/dotfiles/brew/Brewfile" --force
-    _log_success "Brewfile"
+    _log_success "Created Brewfile dump"
   else
     _log_warning "Homebrew not found, skipping Brewfile generation"
   fi
 
   _log_header "BACKING UP Karabiner"
   cp ~/.config/karabiner/karabiner.json ~/dotfiles/keyboard/karabiner.json
+  _log_success 'Copied Karabiner config'
 
   # current date
   current_date=$(date '+%Y-%m-%d')
