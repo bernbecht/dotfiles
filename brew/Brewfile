@@ -4,36 +4,61 @@ tap "kamillobinski/thock"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
 tap "wix/brew"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Collection of portable C++ source libraries
 brew "boost"
+# Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
+# C++14 implementation of the TLS-1.3 standard
 brew "fizz"
+# Modular, composable client/server abstractions framework
 brew "wangle"
+# Facebook's branch of Apache Thrift, including a new C++ server
 brew "fbthrift"
+# Thrift functions for querying information from a service
 brew "fb303"
+# Shared library for Watchman and Eden projects
 brew "edencommon"
+# Modern, maintained replacement for ls
 brew "eza"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# AI coding agent, built for the terminal
 brew "opencode"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Watch files and take action when they change
 brew "watchman"
+# JavaScript package manager
 brew "yarn"
-brew "felixkratz/formulae/borders"
+# Thock your mac keyboard
 brew "kamillobinski/thock/thock"
-brew "oven-sh/bun/bun"
-brew "wix/brew/applesimutils"
+# AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
+# File manager
 cask "bloom"
+# Terminal-based AI coding assistant
 cask "claude-code"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Menu bar manager
 cask "jordanbaird-ice"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
 cask "warp"
 vscode "andenetalexander.vim-cheatsheet"
 vscode "anotherglitchinthematrix.monochrome"
