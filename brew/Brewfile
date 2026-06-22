@@ -1,9 +1,9 @@
-tap "felixkratz/formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "homebrew/bundle"
 tap "kamillobinski/thock"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
-tap "wix/brew"
+tap "wix-incubator/brew", "https://github.com/wix-incubator/homebrew-brew.git"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Collection of portable C++ source libraries
