@@ -1,6 +1,6 @@
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "homebrew/bundle"
-tap "kamillobinski/thock"
+tap "kamillobinski/thock", trusted: { casks: ["thock"] }
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
 tap "wix-incubator/brew", "https://github.com/wix-incubator/homebrew-brew.git"
