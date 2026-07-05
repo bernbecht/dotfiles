@@ -20,7 +20,7 @@
                         ]
                     },
                     {
-                        "description": "Launch Browser with hyper",
+                        "description": "Open new Chrome window with hyper",
                         "manipulators": [
                             {
                                 "from": {
@@ -30,7 +30,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "shell_command": "open -na Safari" }],
+                                "to": [{ "shell_command": "open -n -a \"Google Chrome\"" }],
                                 "type": "basic"
                             }
                         ]
