@@ -46,8 +46,7 @@ brew "yarn"
 brew "felixkratz/formulae/borders", trusted: true
 # Thock your mac keyboard
 brew "kamillobinski/thock/thock"
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
+cask "aerospace"
 # File manager
 cask "bloom"
 # Terminal-based AI coding assistant
