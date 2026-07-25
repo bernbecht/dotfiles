@@ -3,3 +3,5 @@
 [user]
     name = Bernardo Bechtold
     email = bernardo.bechtold@shopify.com 
+[credential]
+	helper = osxkeychain
