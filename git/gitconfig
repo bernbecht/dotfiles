@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 
 [user]
-    name = Bernardo Bechtold
-    email = bernardo.bechtold@shopify.com 
+	name = Bernardo Bechtold
+	email = bechtold.bernardo@gmail.com
 [credential]
 	helper = osxkeychain
