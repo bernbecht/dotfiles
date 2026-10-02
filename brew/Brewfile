@@ -61,8 +61,6 @@ cask "jordanbaird-ice"
 cask "raycast"
 # Open-source code editor
 cask "visual-studio-code"
-# Rust-based terminal
-cask "warp"
 vscode "anotherglitchinthematrix.monochrome"
 vscode "arcticicestudio.nord-visual-studio-code"
 vscode "austenc.tailwind-docs"
